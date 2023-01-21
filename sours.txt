@@ -1,0 +1,36 @@
+Console.WriteLine("Введите число");
+int number = Convert.ToInt32(Console.ReadLine());
+char[] x = number.ToString().ToCharArray();
+int[] y  = new int[x.Length];
+int v = 0;
+int u = 0;
+
+foreach (int a in x){
+    Console.WriteLine(a);
+    v = a - 48;
+    y[u] = v;
+    u++;
+} 
+foreach (int a in y){
+    Console.WriteLine(a);
+}
+//Console.WriteLine(v);
+
+int i = y.Length;
+int t = i / 2;
+int r = 0;
+int c = i;
+
+if ( i > 1) {
+    for (int o = 0; o < i / 2; o++){
+        c--;
+        if ( y[o] == y[c]) {
+            r++;
+        }
+    } if ( r == t) {
+        Console.WriteLine("Success");
+    } else Console.WriteLine("Successs");
+} else Console.WriteLine("fail");
+Console.WriteLine(i);
+Console.WriteLine(t);
+Console.WriteLine(r);
