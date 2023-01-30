@@ -23,6 +23,14 @@ int fillingRandom(int size){
     } return ret;
 }
 
+int searchOdd (int x){
+    int count = 0;
+        foreach(int a in result){
+        if (a % 2 == 0) count++; 
+    } return count;
+}
+
 foreach(int x in result){
     Console.Write($"{x} ");
 }
+Console.Write($" :<{searchOdd(1)} чётных чисел");
